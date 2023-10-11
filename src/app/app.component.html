@@ -1,7 +1,13 @@
+<div class="layout-topbar card">
+  <a class="layout-topbar-logo" routerLink="">
+    <img src="https://listening-ear.co.uk/wp-content/themes/listeningear/images/logo.png" alt="logo" style="width:12em" >
+  </a>
 
-<div class="card">
-  <p-menubar [model]="items"></p-menubar>
+  <button class="p-link layout-topbar-button">
+    <i class="pi pi-user"></i>
+  </button>
 </div>
+
 
 <ag-grid-angular
   style="width: 100%; height: 500px;"
@@ -13,7 +19,5 @@
   (gridReady)="onGridReady($event)"
   (cellClicked)="onCellClicked($event)"
 ></ag-grid-angular>
- 
-<!-- <router-outlet></router-outlet> -->
 
 <router-outlet></router-outlet>

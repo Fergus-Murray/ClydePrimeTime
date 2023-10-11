@@ -31,14 +31,7 @@ public rowClassRules: RowClassRules = {
 };
 
 
-  ngOnInit() {
-          this.items = [
-              {
-                  label: 'User',
-                  icon: 'pi pi-fw pi-file',
-              },
-          ];
-      }
+  ngOnInit() {}
 
 
   columnDefs: ColDef[] = [
