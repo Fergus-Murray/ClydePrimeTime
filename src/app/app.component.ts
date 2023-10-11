@@ -39,7 +39,7 @@ public rowClassRules: RowClassRules = {
     { headerName: 'Check-in time', field: 'time_in' },
     { headerName: 'Check-out time', field: 'time_out' },
     { headerName: 'Appt time start', field: 'app_time_start' },
-    { headerName: 'Appt Time end', field: 'app_time_end' },
+    { headerName: 'Appt time end', field: 'app_time_end' },
     { headerName: 'Client name', field: 'client_name' },
     { headerName: 'Check-in time', field: 'time_in' },
     { headerName: 'Check-out time', field: 'time_out' },
