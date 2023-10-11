@@ -48,13 +48,10 @@ public rowClassRules: RowClassRules = {
     { headerName: 'Appt time start', field: 'app_time_start',editable: true },
     { headerName: 'Appt time end', field: 'app_time_end',editable: true },
     { headerName: 'Client name', field: 'client_name' },
-    { headerName: 'Check-in time', field: 'time_in' },
-    { headerName: 'Check-out time', field: 'time_out' },
-    { headerName: 'Client Flag', field: 'client_flag' },
-    { headerName: 'Therapist phone', field: 'therapist_phone' },
+    { headerName: 'Client marker', field: 'client_flag' },
     { headerName: 'Last status', field: 'status' },
     { headerName: 'Status time', field: 'status_time' },
-    { headerName: 'Phone', field: 'therapist_phone'}
+    { headerName: 'Phone', field: 'therapist_phone' }, //TODO button that just says Phone
   ];
 
   public rowData$!: Observable<any[]>;
