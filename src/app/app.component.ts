@@ -12,6 +12,8 @@ import { getData } from '../common/data';
 })
 export class AppComponent implements OnInit {
 
+  today: number = Date.now();
+
   constructor(private http: HttpClient) {
   }
 
@@ -25,22 +27,31 @@ export class AppComponent implements OnInit {
   public rowData: any[] | null = getData();
 
 public rowClassRules: RowClassRules = {
-  'completed': 'data.client_flag == "Completed"',
-  'warning': 'data.client_flag == "Warn"',
+  'completed': 'data.time_in != null && data.time_out!=null',
+  'warning': 'data.client_flag == "Warn" || data.status=="Warning"',
   'breach': 'data.client_flag == "Breach"',
 };
 
 
-  ngOnInit() {}
+  ngOnInit() {
+
+    setInterval(()=>{
+      this.today =Date.now();
+    },1000);
+  }
 
 
   columnDefs: ColDef[] = [
     { headerName: 'Therapist name', field: 'therapist_name' },
+    { headerName: 'Check-in time', field: 'time_in', editable:true },
+    { headerName: 'Check-out time', field: 'time_out', editable:true },
+    { headerName: 'Appt time start', field: 'app_time_start',editable: true },
+    { headerName: 'Appt time end', field: 'app_time_end',editable: true },
+    { headerName: 'Client name', field: 'client_name' },
     { headerName: 'Check-in time', field: 'time_in' },
     { headerName: 'Check-out time', field: 'time_out' },
-    { headerName: 'Appt time start', field: 'app_time_start' },
-    { headerName: 'Appt time end', field: 'app_time_end' },
-    { headerName: 'Client name', field: 'client_name' },
+    { headerName: 'Client Flag', field: 'client_flag' },
+    { headerName: 'Therapist phone', field: 'therapist_phone' },
     { headerName: 'Last status', field: 'status' },
     { headerName: 'Status time', field: 'status_time' },
     { headerName: 'Phone', field: 'therapist_phone'}
@@ -52,6 +63,10 @@ public rowClassRules: RowClassRules = {
   }
 
   onCellClicked( e: CellClickedEvent): void {
-    console.log('cellClicked', e);
+    // console.log('cellClicked', e);
+  }
+
+  onCellValueChanged(event: any){
+    console.log(event.data);
   }
 }

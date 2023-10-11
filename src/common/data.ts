@@ -61,10 +61,11 @@ export function getData(): any[] {
       "time_in": null,
       "time_out": null,
       "client_name": "Derek Dusk",
-      "client_flag": "Completed",
+      "client_flag": "",
       "therapist_name": "Paul Black",
       "therapist_phone": "01411112233",
       "status": "Warning",
+      "status_rsn": "violent beahaviour marker",
       "status_time": "2023-10-12T13:40:23",
       "gps": "53.0123,-1.0213"
     },
