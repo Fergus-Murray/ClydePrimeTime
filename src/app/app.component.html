@@ -1,6 +1,6 @@
 <div class="layout-topbar card">
   <a class="layout-topbar-logo" routerLink="">
-    <img src="https://listening-ear.co.uk/wp-content/themes/listeningear/images/logo.png" alt="logo" style="width:12em" >
+    <img src="https://listening-ear.co.uk/wp-content/themes/listeningear/images/logo.png" alt="logo" style="width:15em" >
   </a>
 
   <button class="p-link layout-topbar-button">
@@ -21,5 +21,11 @@
   (cellClicked)="onCellClicked($event)"
   (cellValueChanged)="onCellValueChanged($event)"
 ></ag-grid-angular>
+
+  <div class="flex flex-row flex-wrap footer">
+      <a href="/asd">Manage markers</a>
+      <a href="/asd">Manage admin allocation</a>
+      <a href="/asd">Contact support</a>
+  </div>
 
 <router-outlet></router-outlet>

@@ -45,19 +45,16 @@ export class AppComponent implements OnInit {
 
 
   columnDefs: ColDef[] = [
-    { headerName: 'Therapist name', field: 'therapist_name' },
-    { headerName: 'Check-in time', field: 'time_in', editable: true },
-    { headerName: 'Check-out time', field: 'time_out', editable: true },
-    { headerName: 'Appt time start', field: 'app_time_start', editable: true },
-    { headerName: 'Appt time end', field: 'app_time_end', editable: true },
-    { headerName: 'Client name', field: 'client_name' },
-    { headerName: 'Check-in time', field: 'time_in' },
-    { headerName: 'Check-out time', field: 'time_out' },
-    { headerName: 'Client Flag', field: 'client_flag' },
-    { headerName: 'Therapist phone', field: 'therapist_phone' },
-    { headerName: 'Last status', field: 'status' },
-    { headerName: 'Status time', field: 'status_time' },
-    { headerName: 'Gps', field: 'gps' }
+    { headerName: 'Therapist name', field: 'therapist_name', width: 160,  },
+    { headerName: 'Check-in time', field: 'time_in', editable:true,  width: 150, },
+    { headerName: 'Check-out time', field: 'time_out', editable:true, width: 160, },
+    { headerName: 'Appt start', field: 'app_time_start',editable: true, width: 130, },
+    { headerName: 'Appt end', field: 'app_time_end',editable: true, width: 130, },
+    { headerName: 'Client name', field: 'client_name', width: 140, },
+    { headerName: 'Client marker', field: 'client_flag', width: 140, },
+    { headerName: 'Last status', field: 'status', width: 130, },
+    { headerName: 'Status time', field: 'status_time', width: 150, }, //TODO format this
+    { headerName: 'Phone', field: 'therapist_phone' }, //TODO button that just says Phone
   ];
 
 
