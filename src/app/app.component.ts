@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ColDef } from 'ag-grid-community';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,18 @@ import { ColDef } from 'ag-grid-community';
 })
 export class AppComponent {
   title = 'appointment-tracking-app';
+  items: MenuItem[] | undefined;
+
+  ngOnInit() {
+          this.items = [
+              {
+                  label: 'User',
+                  icon: 'pi pi-fw pi-file',
+              },
+          ];
+      }
+
+
   columnDefs: ColDef[] = [
     { headerName: 'Column 1', field: 'col1' },
     { headerName: 'Column 2', field: 'col2' },
