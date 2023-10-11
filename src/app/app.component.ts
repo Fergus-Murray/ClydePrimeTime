@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CellClickedEvent, ColDef, GridReadyEvent } from 'ag-grid-community';
 import { Observable } from 'rxjs';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,18 @@ export class AppComponent implements OnInit {
   };
 
   title = 'appointment-tracking-app';
+  items: MenuItem[] | undefined;
+
+  ngOnInit() {
+          this.items = [
+              {
+                  label: 'User',
+                  icon: 'pi pi-fw pi-file',
+              },
+          ];
+      }
+
+
   columnDefs: ColDef[] = [
     { headerName: 'TherapistName', field: 'therapist_name' },
     { headerName: 'Checkin Time', field: 'time_in' },
@@ -44,9 +57,6 @@ export class AppComponent implements OnInit {
   // ];
 
   public rowData$!: Observable<any[]>;
-
-  ngOnInit() {
-  }
 
   onGridReady(params: GridReadyEvent) {
     this.rowData$ = this.http
