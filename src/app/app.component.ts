@@ -22,14 +22,7 @@ export class AppComponent implements OnInit {
   title = 'appointment-tracking-app';
   items: MenuItem[] | undefined;
 
-  ngOnInit() {
-          this.items = [
-              {
-                  label: 'User',
-                  icon: 'pi pi-fw pi-file',
-              },
-          ];
-      }
+  ngOnInit() {}
 
 
   columnDefs: ColDef[] = [
