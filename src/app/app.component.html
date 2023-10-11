@@ -8,13 +8,21 @@
       <i class="pi pi-user"></i>
     </button>
   </div>
+
+<div class="card">
+  <p-menubar [model]="items"></p-menubar>
 </div>
 
 <ag-grid-angular
   style="width: 100%; height: 500px;"
   class="ag-theme-alpine"
   [columnDefs]="columnDefs"
-  [rowData]="rowData"
+  [defaultColDef]="defaultColDef"
+  [rowData]="rowData$ | async"
+  (gridReady)="onGridReady($event)"
+  (cellClicked)="onCellClicked($event)"
 ></ag-grid-angular>
+
+<!-- <router-outlet></router-outlet> -->
 
 <router-outlet></router-outlet>

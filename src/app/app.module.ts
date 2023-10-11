@@ -4,6 +4,7 @@ import { AgGridModule } from 'ag-grid-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { MenubarModule } from 'primeng/menubar';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { MenubarModule } from 'primeng/menubar';
     BrowserModule,
     AppRoutingModule,
     AgGridModule,
+    HttpClientModule,
     MenubarModule
   ],
   providers: [],
