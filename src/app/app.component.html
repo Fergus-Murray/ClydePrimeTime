@@ -1,5 +1,13 @@
-<div class="card">
-  <p-menubar [model]="items"></p-menubar>
+<div class="layout-topbar">
+  <a class="layout-topbar-logo" routerLink="">
+    <img src="https://listening-ear.co.uk/wp-content/themes/listeningear/images/logo.png" alt="logo" style="width:6em; height:6em;" >
+  </a>
+
+  <div #topbarmenu class="layout-topbar-menu">
+    <button class="p-link layout-topbar-button">
+      <i class="pi pi-user"></i>
+    </button>
+  </div>
 </div>
 
 <ag-grid-angular
