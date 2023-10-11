@@ -35,25 +35,25 @@ public rowClassRules: RowClassRules = {
 
 
   columnDefs: ColDef[] = [
-    { headerName: 'TherapistName', field: 'therapist_name' },
-    { headerName: 'Checkin Time', field: 'time_in' },
-    { headerName: 'Checkout Time', field: 'time_out' },
-    { headerName: 'Appointment Time Start', field: 'app_time_start' },
-    { headerName: 'Appointment Time End', field: 'app_time_end' },
-    { headerName: 'ClientName', field: 'client_name' },
-    { headerName: 'Checkin Time', field: 'time_in' },
-    { headerName: 'Checkout Time', field: 'time_out' },
-    { headerName: 'Client Name', field: 'client_name' },
-    { headerName: 'Therapist Phone', field: 'therapist_phone' },
-    { headerName: 'Status', field: 'status' },
-    { headerName: 'Status Time', field: 'status_time' },
+    { headerName: 'Therapist name', field: 'therapist_name' },
+    { headerName: 'Check-in time', field: 'time_in' },
+    { headerName: 'Check-out time', field: 'time_out' },
+    { headerName: 'Appt time start', field: 'app_time_start' },
+    { headerName: 'Appt Time end', field: 'app_time_end' },
+    { headerName: 'Client name', field: 'client_name' },
+    { headerName: 'Check-in time', field: 'time_in' },
+    { headerName: 'Check-out time', field: 'time_out' },
+    { headerName: 'Client name', field: 'client_name' },
+    { headerName: 'Therapist phone', field: 'therapist_phone' },
+    { headerName: 'Last status', field: 'status' },
+    { headerName: 'Status time', field: 'status_time' },
     { headerName: 'Gps', field: 'gps' }
   ];
 
   public rowData$!: Observable<any[]>;
 
   onGridReady(params: GridReadyEvent) {
-    
+
   }
 
 
