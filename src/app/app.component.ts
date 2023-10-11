@@ -41,21 +41,15 @@ public rowClassRules: RowClassRules = {
     { headerName: 'Appt time start', field: 'app_time_start' },
     { headerName: 'Appt time end', field: 'app_time_end' },
     { headerName: 'Client name', field: 'client_name' },
-    { headerName: 'Check-in time', field: 'time_in' },
-    { headerName: 'Check-out time', field: 'time_out' },
-    { headerName: 'Client name', field: 'client_name' },
-    { headerName: 'Therapist phone', field: 'therapist_phone' },
     { headerName: 'Last status', field: 'status' },
     { headerName: 'Status time', field: 'status_time' },
-    { headerName: 'Gps', field: 'gps' }
+    { headerName: 'Phone', field: 'therapist_phone'}
   ];
 
   public rowData$!: Observable<any[]>;
 
   onGridReady(params: GridReadyEvent) {
-
   }
-
 
   onCellClicked( e: CellClickedEvent): void {
     console.log('cellClicked', e);
