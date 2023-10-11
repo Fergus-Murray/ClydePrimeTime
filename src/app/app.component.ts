@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { CellClickedEvent, ColDef, GridReadyEvent } from 'ag-grid-community';
+import { CellClickedEvent, ColDef, GridOptions, GridReadyEvent, RowClassRules } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { MenuItem } from 'primeng/api';
+import { getData } from '../common/data';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,14 @@ export class AppComponent implements OnInit {
 
   title = 'appointment-tracking-app';
   items: MenuItem[] | undefined;
+  public rowData: any[] | null = getData();
+
+public rowClassRules: RowClassRules = {
+  'completed': 'data.client_flag == "Completed"',
+  'warning': 'data.client_flag == "Warn"',
+  'breach': 'data.client_flag == "Breach"',
+};
+
 
   ngOnInit() {
           this.items = [
@@ -48,19 +57,10 @@ export class AppComponent implements OnInit {
     { headerName: 'Gps', field: 'gps' }
   ];
 
-  // rowData = [
-  //   { therapist_name: 'A', time_in: 1, time_out: true, app_time_start: 'X', app_time_end: new Date(),client_name:'abc' }
-  //   // Add more data as needed
-  // ];
-
-  // rowData: any[] = [
-  // ];
-
   public rowData$!: Observable<any[]>;
 
   onGridReady(params: GridReadyEvent) {
-    this.rowData$ = this.http
-    .get<any[]>('http://localhost:3000/appointmentdata');
+    
   }
 
 

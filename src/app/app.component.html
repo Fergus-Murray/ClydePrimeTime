@@ -8,7 +8,8 @@
   class="ag-theme-alpine"
   [columnDefs]="columnDefs"
   [defaultColDef]="defaultColDef"
-  [rowData]="rowData$ | async"
+  [rowData]="rowData"
+  [rowClassRules]="rowClassRules"
   (gridReady)="onGridReady($event)"
   (cellClicked)="onCellClicked($event)"
 ></ag-grid-angular>
