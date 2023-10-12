@@ -53,8 +53,15 @@ export class AppComponent implements OnInit {
     { headerName: 'Client name', field: 'client_name', width: 140, },
     { headerName: 'Client marker', field: 'client_flag', width: 140, },
     { headerName: 'Last status', field: 'status', width: 130, },
-    { headerName: 'Status time', field: 'status_time', width: 150, }, //TODO format this
-    { headerName: 'Phone', field: 'therapist_phone' }, //TODO button that just says Phone
+    { headerName: 'Status time', field: 'status_time', width: 150,
+                     valueFormatter: function (params) {
+                      return params.value;
+                     },
+                 }, //TODO format this
+    { headerName: 'Actions', field: 'therapist_phone',
+      cellRenderer: () => {
+                          return '<button>Call therapist</button>';
+                      }},
   ];
 
 
