@@ -62,6 +62,7 @@ export class AppComponent implements OnInit {
     { headerName: 'Actions', field: 'therapist_phone',
       cellRenderer: () => {
                           return '<button severity=\x22success\x22><i class=\x22pi pi-phone\x22></i></button>';
+                          // return '<i class="fa-solid fa-phone"></i>';
                       }},
   ];
 
