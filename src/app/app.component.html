@@ -8,8 +8,8 @@
   </button>
 </div>
 
-<p>Welcome Richard, it's {{ today | date:'medium' }}</p>
 
+<p>Welcome Richard, it's {{ today | date:'medium' }}</p>
 <ag-grid-angular
   style="width: 100%; height: 630px;"
   class="ag-theme-alpine"
@@ -22,10 +22,16 @@
   (cellValueChanged)="onCellValueChanged($event)"
 ></ag-grid-angular>
 
-  <div class="flex flex-row flex-wrap footer">
+
+<button class="btn btn-primary rounded-0 btn-block" id="insertRow" (onClick)="addNewRow()">Add new row</button>
+<!-- <p-button label="Add New Therapy" ></p-button> -->
+  
+<div class="flex flex-row flex-wrap footer">
       <a href="/asd">Manage markers</a>
       <a href="/asd">Manage admin allocation</a>
       <a href="/asd">Contact support</a>
+      
   </div>
 
+  
 <router-outlet></router-outlet>

@@ -13,8 +13,8 @@ export function getData(): any[] {
       "client_flag": "",
       "therapist_name": "Paul Black",
       "therapist_phone": "01411112233",
-      "status": "CheckedOut",
-      "status_time": "2023-10-11T16:55:02",
+      "status": "Checked Out",
+      "status_time": "16:50:44 12th Oct 23",
       "gps": "54.0122,-7.012345"
     },
     {
@@ -65,8 +65,7 @@ export function getData(): any[] {
       "therapist_name": "Paul Black",
       "therapist_phone": "01411112233",
       "status": "Warning",
-      "status_rsn": "violent beahaviour marker",
-      "status_time": "2023-10-12T13:40:23",
+      "status_time": "12:11:44 26th Nov 22",
       "gps": "53.0123,-1.0213"
     },
     {
@@ -83,7 +82,7 @@ export function getData(): any[] {
       "therapist_name": "Amanda White",
       "therapist_phone": "01212233445",
       "status": "Help",
-      "status_time": "2023-10-12T13:46:44",
+      "status_time": "13:45:01 12th Oct 23",
       "gps": "55.1987,2.6523"
     },
     {
@@ -101,6 +100,57 @@ export function getData(): any[] {
       "therapist_phone": "01212233445",
       "status": null,
       "status_time": null,
+      "gps": null
+    },
+    {
+      "app_id": 7,
+      "user_id": 3,
+      "client_id": 3,
+      "app_date": "2023-10-12T00:00:00",
+      "app_time_start": "14:15:00",
+      "app_time_end": "16:00:00",
+      "time_in": null,
+      "time_out": null,
+      "client_name": "Jack Lee",
+      "client_flag": "Substance abuse",
+      "therapist_name": "Lisa Chesterfield",
+      "therapist_phone": "01212233445",
+      "status": null,
+      "status_time": null,
+      "gps": null
+    },
+    {
+      "app_id": 7,
+      "user_id": 3,
+      "client_id": 3,
+      "app_date": "2023-10-12T00:00:00",
+      "app_time_start": "10:15:00",
+      "app_time_end": "11:00:00",
+      "time_in": "10:16:20",
+      "time_out": "10:49:01",
+      "client_name": "Janice Muir",
+      "client_flag": "",
+      "therapist_name": "Lisa Chesterfield",
+      "therapist_phone": "01212233445",
+      "status": "Checked Out",
+      "status_time": "10:49:01 12th Oct 23",
+      "gps": null
+    },
+    {
+      "app_id": 7,
+      "user_id": 3,
+      "client_id": 3,
+      "app_date": "2023-10-12T00:00:00",
+      "app_time_start": "12:30:00",
+      "app_time_end": "13:00:00",
+      "time_in": "12:35:59",
+      "time_out": "",
+      "client_name": "Philip Green",
+      "client_flag": "",
+      "therapist_name": "Steven Duff",
+      "therapist_phone": "01212233445",
+      "status": "Extended",
+      "status_time": "12:35:59 12th Oct 23",
       "gps": null
     }
   ];
