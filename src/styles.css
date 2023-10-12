@@ -9,12 +9,23 @@
 .warning {
     background-color: sandybrown !important;
   }
-  
+
   .breach {
     background-color: lightcoral !important;
   }
 
   .completed{
     background-color: lightgreen !important;
+  }
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+  .footer a {
+      font-size: 13px;
   }
 
