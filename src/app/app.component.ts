@@ -60,10 +60,9 @@ export class AppComponent implements OnInit {
                  }, //TODO format this
     { headerName: 'Actions', field: 'therapist_phone',
       cellRenderer: () => {
-                          return '<button>Call therapist</button>';
+                          return '<button severity=\x22success\x22><i class=\x22pi pi-phone\x22></i></button>';
                       }},
   ];
-
 
   onGridReady(params: GridReadyEvent) {
     this.gridApi = params.api;
