@@ -9,12 +9,16 @@
 .warning {
     background-color: sandybrown !important;
   }
-  
+
   .breach {
     background-color: lightcoral !important;
   }
 
   .completed{
     background-color: lightgreen !important;
+  }
+
+  .extended {
+    background-color: lightblue !important;
   }
 
