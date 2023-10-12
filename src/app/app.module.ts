@@ -10,10 +10,12 @@ import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BtnCellRendererComponentComponent } from './btn-cell-renderer-component/btn-cell-renderer-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BtnCellRendererComponentComponent
   ],
   imports: [
     BrowserModule,

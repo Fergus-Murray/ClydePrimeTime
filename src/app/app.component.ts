@@ -4,6 +4,8 @@ import { CellClickedEvent, ColDef, GridOptions, GridReadyEvent, RowClassRules } 
 import { Observable } from 'rxjs';
 import { MenuItem, MessageService } from 'primeng/api';
 import { getData } from '../common/data';
+import { BtnCellRendererComponentComponent } from './btn-cell-renderer-component/btn-cell-renderer-component.component';
+
 
 @Component({
   selector: 'app-root',
@@ -61,10 +63,8 @@ export class AppComponent implements OnInit {
                      },
                  }, //TODO format this
     { headerName: 'Actions', field: 'therapist_phone',
-      cellRenderer: () => {
-                          return '<button severity=\x22success\x22><i class=\x22pi pi-phone\x22></i></button><button class=\x22mapbutton\x22severity=\x22success\x22><i class=\x22pi pi-map-marker\x22></i></button>';
-                          // return '<i class="fa-solid fa-phone"></i>';
-                      }},
+      cellRenderer: BtnCellRendererComponentComponent,
+                }
   ];
 
   onGridReady(params: GridReadyEvent) {
@@ -119,6 +119,7 @@ export class AppComponent implements OnInit {
     this.rowData = [...this.rowData, newRow];
     this.gridApi.setRowData(this.rowData);
   }
+
 
 }
 
