@@ -30,8 +30,8 @@ export class AppComponent implements OnInit {
 
   public rowClassRules: RowClassRules = {
     'completed': 'data.time_in != null && data.time_out!=null',
-    'warning': 'data.client_flag == "Warn" || data.status=="Warning"',
-    'breach': 'data.client_flag == "Breach"',
+    'warning': 'data.client_flag || data.status=="Warning"',
+    'breach': 'data.status == "Help"',
   };
 
 
@@ -86,10 +86,10 @@ export class AppComponent implements OnInit {
       if (x.time_in != null && x.time_out != null) {
         x.color = 'green';
       }
-      else if (x.client_flag == "Warn" || x.status == "Warning") {
+      else if (x.client_flag || x.status == "Warning") {
         x.color = 'yellow';
       }
-      else if (x.client_flag == "Breach") {
+      else if (x.status == "Help") {
         x.color = 'red';
       }
       else {
