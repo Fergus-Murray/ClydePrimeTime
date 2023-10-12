@@ -135,6 +135,23 @@ export function getData(): any[] {
       "status": "Checked Out",
       "status_time": "10:49:01 12th Oct 23",
       "gps": null
+    },
+    {
+      "app_id": 7,
+      "user_id": 3,
+      "client_id": 3,
+      "app_date": "2023-10-12T00:00:00",
+      "app_time_start": "12:30:00",
+      "app_time_end": "13:00:00",
+      "time_in": "12:35:59",
+      "time_out": "",
+      "client_name": "Philip Green",
+      "client_flag": "",
+      "therapist_name": "Steven Duff",
+      "therapist_phone": "01212233445",
+      "status": "Extended",
+      "status_time": "12:35:59 12th Oct 23",
+      "gps": null
     }
   ];
 }

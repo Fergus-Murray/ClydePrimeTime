@@ -32,6 +32,7 @@ export class AppComponent implements OnInit {
     'completed': 'data.time_in != null && data.time_out!=null',
     'warning': 'data.client_flag || data.status=="Warning"',
     'breach': 'data.status == "Help"',
+    'extended': 'data.status == "Extended"',
   };
 
 
@@ -83,7 +84,10 @@ export class AppComponent implements OnInit {
 
   setSortedRowData() {
     this.rowData?.forEach((x: any) => {
-      if (x.time_in != null && x.time_out != null) {
+      if (x.status == "Extended"){
+        x.color = 'blue';
+      }
+      else if (x.time_in != null && x.time_out != null) {
         x.color = 'green';
       }
       else if (x.client_flag || x.status == "Warning") {
@@ -97,7 +101,7 @@ export class AppComponent implements OnInit {
       }
     });
 
-    var sortOrder: any = { red: 0, yellow: 1, green: 2, grey: 3 };
+    var sortOrder: any = { red: 0, yellow: 1, green: 2, blue: 3, grey: 4 };
     this.rowData?.sort(function (p1: any, p2: any) {
       return sortOrder[p1.color] - sortOrder[p2.color];
     });
@@ -112,7 +116,7 @@ export class AppComponent implements OnInit {
   addNewRow() {
     const newRow = { app_id: this.rowData.length + 1, time_in:null, time_out:null };
     this.rowData = [...this.rowData, newRow];
-    this.gridApi.setRowData(this.rowData); 
+    this.gridApi.setRowData(this.rowData);
   }
 
 }
