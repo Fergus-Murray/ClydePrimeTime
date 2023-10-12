@@ -8,8 +8,12 @@
   </button>
 </div>
 
+
 <p>Welcome Richard, it's {{ today | date:'medium' }}</p>
 
+<div>
+  <p-button label="Add New Therapy" (onClick)="addNewRow()"></p-button>
+</div>
 <ag-grid-angular
   style="width: 100%; height: 630px;"
   class="ag-theme-alpine"

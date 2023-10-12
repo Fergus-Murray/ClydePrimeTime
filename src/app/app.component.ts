@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CellClickedEvent, ColDef, GridOptions, GridReadyEvent, RowClassRules } from 'ag-grid-community';
 import { Observable } from 'rxjs';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, MessageService } from 'primeng/api';
 import { getData } from '../common/data';
 
 @Component({
@@ -15,7 +15,8 @@ export class AppComponent implements OnInit {
   private gridApi: any;
   today: number = Date.now();
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+    private messageService: MessageService) {
   }
 
   public defaultColDef: ColDef = {
@@ -45,15 +46,15 @@ export class AppComponent implements OnInit {
 
 
   columnDefs: ColDef[] = [
-    { headerName: 'Therapist name', field: 'therapist_name', width: 160,  },
+    { headerName: 'Therapist name', field: 'therapist_name',editable:true, width: 160,  },
     { headerName: 'Check-in time', field: 'time_in', editable:true,  width: 150, },
     { headerName: 'Check-out time', field: 'time_out', editable:true, width: 160, },
     { headerName: 'Appt start', field: 'app_time_start',editable: true, width: 130, },
     { headerName: 'Appt end', field: 'app_time_end',editable: true, width: 130, },
-    { headerName: 'Client name', field: 'client_name', width: 140, },
-    { headerName: 'Client marker', field: 'client_flag', width: 140, },
-    { headerName: 'Last status', field: 'status', width: 130, },
-    { headerName: 'Status time', field: 'status_time', width: 150,
+    { headerName: 'Client name', field: 'client_name',editable:true, width: 140, },
+    { headerName: 'Client marker', field: 'client_flag',editable:true, width: 140, },
+    { headerName: 'Last status', field: 'status',editable:true, width: 130, },
+    { headerName: 'Status time', field: 'status_time',editable:true, width: 150,
                      valueFormatter: function (params) {
                       return params.value;
                      },
@@ -108,6 +109,11 @@ export class AppComponent implements OnInit {
     }
   }
 
+  addNewRow() {
+    const newRow = { app_id: this.rowData.length + 1, time_in:null, time_out:null };
+    this.rowData = [...this.rowData, newRow];
+    this.gridApi.setRowData(this.rowData); 
+  }
 
 }
 
