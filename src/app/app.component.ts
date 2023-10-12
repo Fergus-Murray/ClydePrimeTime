@@ -62,7 +62,7 @@ export class AppComponent implements OnInit {
                  }, //TODO format this
     { headerName: 'Actions', field: 'therapist_phone',
       cellRenderer: () => {
-                          return '<button severity=\x22success\x22><i class=\x22pi pi-phone\x22></i></button><button class=\x22mapbutton\x22severity=\x22success\x22><i class=\x22pi pi-map\x22></i></button>';
+                          return '<button severity=\x22success\x22><i class=\x22pi pi-phone\x22></i></button><button class=\x22mapbutton\x22severity=\x22success\x22><i class=\x22pi pi-map-marker\x22></i></button>';
                           // return '<i class="fa-solid fa-phone"></i>';
                       }},
   ];
