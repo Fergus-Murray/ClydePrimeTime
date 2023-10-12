@@ -9,7 +9,7 @@ export function getData(): any[] {
       "app_time_end": "17:00:00",
       "time_in": "15:58:06",
       "time_out": "16:50:44",
-      "client_name": "Alice Brown",
+      "client_name": "Alicia Smith",
       "client_flag": "",
       "therapist_name": "Paul Black",
       "therapist_phone": "01411112233",
