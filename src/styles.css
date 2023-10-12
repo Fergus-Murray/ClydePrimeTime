@@ -18,6 +18,17 @@
     background-color: lightgreen !important;
   }
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+  .footer a {
+      font-size: 13px;
+  }
+
   .extended {
     background-color: lightblue !important;
   }
