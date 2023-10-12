@@ -52,8 +52,8 @@ export class AppComponent implements OnInit {
     { headerName: 'Appt end', field: 'app_time_end',editable: true, width: 130, },
     { headerName: 'Client name', field: 'client_name', width: 140, },
     { headerName: 'Client marker', field: 'client_flag', width: 140, },
-    { headerName: 'Last status', field: 'status', width: 130, },
-    { headerName: 'Status time', field: 'status_time', width: 150,
+    { headerName: 'Last status', field: 'status', width: 150, },
+    { headerName: 'Status time', field: 'status_time', width: 190,
                      valueFormatter: function (params) {
                       return params.value;
                      },

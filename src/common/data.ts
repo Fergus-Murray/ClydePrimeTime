@@ -14,7 +14,7 @@ export function getData(): any[] {
       "therapist_name": "Paul Black",
       "therapist_phone": "01411112233",
       "status": "CheckedOut",
-      "status_time": "2023-10-11T16:55:02",
+      "status_time": "16:50:44 12th Oct 23",
       "gps": "54.0122,-7.012345"
     },
     {
@@ -65,8 +65,7 @@ export function getData(): any[] {
       "therapist_name": "Paul Black",
       "therapist_phone": "01411112233",
       "status": "Warning",
-      "status_rsn": "violent beahaviour marker",
-      "status_time": "2023-10-12T13:40:23",
+      "status_time": "12:11:44 26th Nov 22",
       "gps": "53.0123,-1.0213"
     },
     {
@@ -83,7 +82,7 @@ export function getData(): any[] {
       "therapist_name": "Amanda White",
       "therapist_phone": "01212233445",
       "status": "Help",
-      "status_time": "2023-10-12T13:46:44",
+      "status_time": "13:45:01 12th Oct 23",
       "gps": "55.1987,2.6523"
     },
     {
