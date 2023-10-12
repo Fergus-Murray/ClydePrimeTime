@@ -118,6 +118,23 @@ export function getData(): any[] {
       "status": null,
       "status_time": null,
       "gps": null
+    },
+    {
+      "app_id": 7,
+      "user_id": 3,
+      "client_id": 3,
+      "app_date": "2023-10-12T00:00:00",
+      "app_time_start": "10:15:00",
+      "app_time_end": "11:00:00",
+      "time_in": "10:16:20",
+      "time_out": "10:49:01",
+      "client_name": "Janice Muir",
+      "client_flag": "",
+      "therapist_name": "Lisa Chesterfield",
+      "therapist_phone": "01212233445",
+      "status": "Checked Out",
+      "status_time": "10:49:01 12th Oct 23",
+      "gps": null
     }
   ];
 }
